@@ -35,11 +35,11 @@ before_script:
 script:
 
   - python3.5 manage.py migrate --noinput
-  #- coverage run --source=AppCoursInteractive, manage.py test
+  - coverage run --source=AppCoursInteractive, manage.py test
 
-# send coverage report to coveralls
+send coverage report to coveralls
 after_success:
-  #coveralls
+  coveralls
 
 
 
