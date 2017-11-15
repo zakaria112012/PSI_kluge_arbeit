@@ -11,7 +11,7 @@ env:
   global:
   - DJANGO="1.11"
   - DJANGO_SETTINGS_MODULE="PSI_kluge_arbeit.settings"
-  - PYTHONPATH="$HOME/builds/amokrane-zatout/PSI_kluge_arbeit.settings"
+  - PYTHONPATH="$HOME/builds/amokrane-zatout/PSI_kluge_arbeit/klugeArbeit.settings"
   - PIP_USE_MIRRORS=true
 # Last two for OS X, courtesy of stackoverflow.com/a/22697917/419005
 # - CFLAGS=-Qunused-arguments
@@ -35,7 +35,7 @@ before_script:
 script:
 
   - python3.5 manage.py migrate --noinput
-  - coverage run --source=PSI_kluge_arbeit.settings, manage.py test
+  - coverage run --source=klugeArbeit.settings, manage.py test
 
 send coverage report to coveralls
 after_success:
