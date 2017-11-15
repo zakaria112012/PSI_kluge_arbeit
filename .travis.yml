@@ -10,7 +10,7 @@ python:
 env:
   global:
   - DJANGO="1.11"
-  - DJANGO_SETTINGS_MODULE="PSI_kluge_arbeit.settings"
+  - DJANGO_SETTINGS_MODULE="klugeArbeit.settings"
   - PYTHONPATH="$HOME/builds/amokrane-zatout/PSI_kluge_arbeit/klugeArbeit.settings"
   - PIP_USE_MIRRORS=true
 # Last two for OS X, courtesy of stackoverflow.com/a/22697917/419005
