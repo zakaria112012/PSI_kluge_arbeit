@@ -12,9 +12,9 @@ class LoginView(TemplateView):
   def post(self, request, **kwargs):
     username = request.POST.get('username', False)
     password = request.POST.get('password', False)
-    print username, password
+    print (username, password)
     user = authenticate(username=username, password=password)
-    print user
+    print (user)
     if user is not None and user.is_active:
         login(request, user)
         return render(request, 'backoffice/index.html')
