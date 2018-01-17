@@ -14,10 +14,15 @@ class LoginView(TemplateView):
     password = request.POST.get('password', False)
     print (username, password)
     user = authenticate(username=username, password=password)
+
+
+
     print (user)
+
     if user is not None and user.is_active:
         login(request, user)
-        return render(request, 'backoffice/index.html')
+
+        return render(request, 'backoffice/index.html', locals())
 
     return render(request, self.template_name)
 
@@ -27,3 +32,12 @@ class LogoutView(TemplateView):
   def get(self, request, **kwargs):
         logout(request)
         return render(request, self.template_name)
+
+
+
+def getChapitre(request):
+    chap = ["python", "c++", "pascal", "java"]
+
+    return render(request, "backoffice/chapitre.html", locals())
+
+

@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', LoginView.as_view()),
     url(r'^logout', LogoutView.as_view()),
+    url(r'^chapitre', getChapitre),
 
 ]
