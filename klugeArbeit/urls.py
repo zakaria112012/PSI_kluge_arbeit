@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from Kluge_arbeit.views import *
+
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^', LoginView.as_view()),
+    url(r'^logout', LogoutView.as_view()),
+
 ]
