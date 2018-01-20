@@ -7,7 +7,7 @@ from django.http import *
 from django.views.generic import TemplateView
 from django.conf import settings
 
-class LoginView(TemplateView):
+"""class LoginView(TemplateView):
   template_name = 'front/index.html'
   def post(self, request, **kwargs):
     username = request.POST.get('username', False)
@@ -15,10 +15,8 @@ class LoginView(TemplateView):
     print (username, password)
     user = authenticate(username=username, password=password)
 
-
-
     print (user)
-
+    
     if user is not None and user.is_active:
         login(request, user)
 
@@ -34,10 +32,13 @@ class LogoutView(TemplateView):
         return render(request, self.template_name)
 
 
+"""
+
 
 def getChapitre(request):
     chap = ["python", "c++", "pascal", "java"]
 
-    return render(request, "backoffice/chapitre.html", locals())
+    return render(request, "Kluge_arbeit/backoffice/chapitre.html", locals())
 
-
+def index(request):
+    return render(request, "Kluge_arbeit/index.html")
