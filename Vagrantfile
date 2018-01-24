@@ -6,4 +6,5 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = "moulinette"
 
   config.vm.provision 'shell', path: 'scripts/install.sh'
+  config.vm.provision 'shell', path: 'scripts/migration.sh'
 end
