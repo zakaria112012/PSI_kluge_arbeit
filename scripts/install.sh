@@ -17,6 +17,7 @@ apt-get install -y python3-pip
 pip3 install --upgrade pip
 pip3 install django
 pip3 install psycopg2
+pip3 install python-form
 
 # Installation de mysql server
 
@@ -38,6 +39,7 @@ echo "installing python mysql db"
 apt-get install libmysqlclient-dev
 #without pip3 it will not going to work for python3
 pip3 install mysqlclient
+
 echo "installing python mysql db done"
 mysql -uroot -e "CREATE DATABASE myproject CHARACTER SET utf8 COLLATE utf8_general_ci"
 mysql -uroot -e "CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password'"

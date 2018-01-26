@@ -23,7 +23,7 @@ print_help () {
 }
 
 
-/usr/bin/python3.5 /vagrant/manage.py makemigrations
+/usr/bin/python3.5 /vagrant/manage.py makemigrations Kluge_arbeit
 /usr/bin/python3.5 /vagrant/manage.py migrate
 echo "making migrations and migrate"
 # Create user admin

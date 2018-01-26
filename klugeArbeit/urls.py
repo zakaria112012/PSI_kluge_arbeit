@@ -24,7 +24,7 @@ urlpatterns = [
     #url(r'^', LoginView.as_view()),
     #url(r'^logout', LogoutView.as_view()),
     url(r'^$',logIn),
-    url(r'^login$', logIn),
+    url(r'^index$', index),
     url(r'^logout$', logOut),
     url(r'^enregistrement', signup),
     url(r'^chapitre$', getChapitre)
