@@ -6,7 +6,6 @@ admin_pwd="password"
 admin_email="$admin_user@example.com"
 
 
-export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
 apt-get -y upgrade
@@ -32,11 +31,13 @@ export DEBIAN_FRONTEND=noninteractive
 echo "installing over mysql server"
 
 apt-get -q -y install mysql-server
+service mysql start
 #without pip3 it will not going to work for python3
 echo "installing python mysql db"
 
 #sudo pip3 install mysqlclient fails with mysql_config not found
-apt-get install libmysqlclient-dev
+
+apt-get -y install libmysqlclient-dev
 #without pip3 it will not going to work for python3
 pip3 install mysqlclient
 
